@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIS,ISSくん 使い方マニュアル</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans JP', sans-serif;
+        }
+        .step-card {
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .step-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <div class="container mx-auto p-4 sm:p-6 lg:p-8">
+        <!-- ヘッダー -->
+        <header class="text-center mb-10">
+            <h1 class="text-3xl sm:text-4xl font-bold text-gray-900">AIS,ISSくん 使い方マニュアル</h1>
+            <p class="mt-2 text-lg text-gray-600">NotebookLM を利用した AIS / ISS 算出の手順</p>
+        </header>
+
+        <main class="max-w-4xl mx-auto">
+
+            <!-- 目的 -->
+            <section id="purpose" class="mb-10">
+                <h2 class="text-2xl font-semibold mb-4 border-b-2 border-indigo-500 pb-2">目的</h2>
+                <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200">
+                    <p class="text-gray-700 leading-relaxed">AIS (Abbreviated Injury Scale) および ISS (Injury Severity Score) の算出を簡略化し、業務の効率化を図ります。</p>
+                </div>
+            </section>
+
+            <!-- 主な成果 -->
+            <section id="achievements" class="mb-10">
+                <h2 class="text-2xl font-semibold mb-4 border-b-2 border-indigo-500 pb-2">主な成果</h2>
+                <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 space-y-4">
+                    <div>
+                        <h3 class="font-semibold text-lg text-gray-800">AIS2005のデータベース化</h3>
+                        <p class="text-gray-700 mt-1">書籍をPDF化・Excel化し、検索や参照が容易になりました。</p>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-lg text-gray-800">AIによる算出サポート</h3>
+                        <p class="text-gray-700 mt-1">NotebookLM（GoogleのAIツール）を使用し、チャット形式でAISコードやISSを算出できるようになりました。</p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- 利用方法 -->
+            <section id="usage" class="mb-10">
+                <h2 class="text-2xl font-semibold mb-4 border-b-2 border-indigo-500 pb-2">利用方法</h2>
+                <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200">
+                    <ul class="list-none space-y-4 text-gray-700">
+                        <li>
+                            <h4 class="font-semibold text-md text-gray-800">AIチャット (NotebookLM) の利用</h4>
+                            <p class="mt-1">医局のPCで、共有のGoogleアカウント（NotebookLM用）にログインしてご利用ください。ご自身のスマートフォン等でも、共有URLを個人のGoogleアカウントで開くことで利用可能です。</p>
+                        </li>
+                        <li>
+                            <h4 class="font-semibold text-md text-gray-800">PDF・Excelデータの利用</h4>
+                            <p class="mt-1">医局PCの「AIS,ISSデータ」フォルダ内に保存しています。ご自由にご活用ください。</p>
+                        </li>
+                        <li>
+                            <h4 class="font-semibold text-md text-gray-800">原本について</h4>
+                            <p class="mt-1">裁断した原本は、ファイリングして元の棚に戻してあります。</p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 重要：ご利用にあたっての注意点 -->
+            <section id="important-notes" class="mb-12">
+                <h2 class="text-2xl font-semibold mb-4 border-b-2 border-red-500 pb-2 text-red-600">重要：ご利用にあたっての注意点</h2>
+                <div class="bg-red-50 border-l-4 border-red-500 text-red-800 p-6 rounded-r-lg shadow-md space-y-5">
+                    <div>
+                        <h3 class="font-bold text-lg flex items-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>内容の確認をお願いします</h3>
+                        <p class="mt-2 pl-8">元データが膨大かつ複雑なため、AIによる自動データ化の過程で誤りが含まれている可能性があります。町山の方で一通り確認しましたが、当面の間は、AIの回答を必ず原本（PDF/Excel）でダブルチェックするようお願いいたします。<br>※AIにページ番号を聞くと、確認作業がスムーズです。</p>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg flex items-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6.736 4.01l.493-2.956a2 2 0 011.32-1.542l.39-.163a2 2 0 001.32-1.542l.493-2.956m-3.464 0l.493-2.956a2 2 0 011.32-1.542l.39-.163a2 2 0 001.32-1.542l.493-2.956" /></svg>データの取り扱いは慎重に</h3>
+                        <p class="mt-2 pl-8">このデータは書籍を独自に電子化したものです。院外への持ち出しや一般公開は固くお断りします。</p>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg flex items-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg>AIの特性について</h3>
+                        <p class="mt-2 pl-8">AIは、質問の仕方によって回答の精度が変わったり、同じ質問でも結果が異なる場合があります。</p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- 皆様へのお願い -->
+            <section id="request" class="mb-12">
+                 <h2 class="text-2xl font-semibold mb-4 border-b-2 border-indigo-500 pb-2">皆様へのお願い</h2>
+                 <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200">
+                     <p class="text-gray-700 leading-relaxed">このツールが、皆様の業務効率化に少しでも貢献できれば幸いです。<br>初めての試みのため、至らない点も多いかと存じます。不備や改善点、また「こうすればもっと便利になる」といったご意見・ご感想がありましたら、ぜひ町山までお気軽にご連絡ください。<br>皆様からのフィードバックをもとに、より良いツールにしていきたいと考えております。<br>どうぞよろしくお願いいたします。</p>
+                 </div>
+            </section>
+
+            <!-- 使い方セクション -->
+            <section id="how-to-use">
+                <h2 class="text-2xl font-semibold mb-6 border-b-2 border-blue-500 pb-2">使い方</h2>
+                <div class="space-y-8">
+
+                    <!-- ステップ 1 -->
+                    <div class="step-card bg-white p-6 rounded-lg shadow-md border border-gray-200">
+                        <div class="flex items-start space-x-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-blue-500 text-white rounded-full flex items-center justify-center text-xl font-bold">1</div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2">NotebookLMを起動</h3>
+                                <p class="text-gray-700 mb-4">医局のパソコンのデスクトップ画面にある「NotebookLM」のアイコンをダブルクリックして起動します。</p>
+                                <img src="https://i.imgur.com/q5SZtpa.png" alt="デスクトップ画面のスクリーンショット" class="mt-4 rounded-lg border">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ステップ 2 -->
+                    <div class="step-card bg-white p-6 rounded-lg shadow-md border border-gray-200">
+                        <div class="flex items-start space-x-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-blue-500 text-white rounded-full flex items-center justify-center text-xl font-bold">2</div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2">「AIS, ISSくん」を選択</h3>
+                                <p class="text-gray-700 mb-4">NotebookLMのホーム画面が表示されたら、「AIS, ISSくん」と書かれたノートブックをクリックします。</p>
+                                <img src="https://i.imgur.com/WiK2U3P.png" alt="NotebookLMホーム画面" class="mt-4 rounded-lg border">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ステップ 3 -->
+                    <div class="step-card bg-white p-6 rounded-lg shadow-md border border-gray-200">
+                        <div class="flex items-start space-x-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-blue-500 text-white rounded-full flex items-center justify-center text-xl font-bold">3</div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2">傷病名を入力</h3>
+                                <p class="text-gray-700 mb-4">画面下部の入力欄に、AIS/ISSを計算したい傷病名をすべて入力します。診断に関わる情報は、できるだけ詳細に記載してください。</p>
+                                <img src="https://i.imgur.com/Dg4VRSm.png" alt="傷病名入力画面" class="mt-4 rounded-lg border">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ステップ 4 -->
+                    <div class="step-card bg-white p-6 rounded-lg shadow-md border border-gray-200">
+                        <div class="flex items-start space-x-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-blue-500 text-white rounded-full flex items-center justify-center text-xl font-bold">4</div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2">不足情報を追記</h3>
+                                <p class="text-gray-700 mb-4">NotebookLMからの返答を確認します。情報が不足している場合、「不足情報入力フォーマット」が提示されます。このフォーマットをコピーして入力欄に貼り付け、必要な情報を追記して再度送信します。</p>
+                                <ul class="list-disc list-inside text-gray-600 space-y-1">
+                                    <li>情報が不明な場合は、空欄にするか「詳細不明」と記載してください。</li>
+                                </ul>
+                                <img src="https://i.imgur.com/0OCChrj.png" alt="不足情報入力フォーマット画面" class="mt-4 rounded-lg border">
+                                <img src="https://i.imgur.com/9JhxY3t.png" alt="不足情報入力フォーマット画面" class="mt-4 rounded-lg border">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- ステップ 5 -->
+                    <div class="step-card bg-white p-6 rounded-lg shadow-md border border-gray-200">
+                        <div class="flex items-start space-x-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-blue-500 text-white rounded-full flex items-center justify-center text-xl font-bold">5</div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2">結果の確認とソースの検証</h3>
+                                <p class="text-gray-700 mb-4">適切なAISコードとISSが算出されるまで、ステップ4の作業を繰り返します。最終的な回答が得られたら、その内容が適切かどうか、提示されるソース（根拠）をクリックして確認してください。</p>
+                                <img src="https://i.imgur.com/JIaQC2E.png" alt="最終結果とソース確認画面" class="mt-4 rounded-lg border">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- ソースデータセクション -->
+            <section id="source-data" class="mt-12">
+                <h2 class="text-2xl font-semibold mb-6 border-b-2 border-green-500 pb-2">AIS2005データについて</h2>
+                <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200">
+                    <p class="text-gray-700 mb-4">NotebookLMが参照しているソースデータは、デスクトップ上の「AIS2005データ」フォルダに保管されています。このフォルダには、以下のファイルが含まれており、内容を確認することができます。</p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700 pl-4">
+                        <li><span class="font-semibold">AIS 2005 ルール:</span> AISのコーディングルールが記載されたデータ</li>
+                        <li><span class="font-semibold">AIS2005:</span> AIS2005の原本PDFデータ</li>
+                        <li><span class="font-semibold">AISコード一覧:</span> AISコードと傷病名の対応表（Excel形式）</li>
+                        <img src="https://i.imgur.com/8D90NmR.png" alt="最終結果とソース確認画面" class="mt-4 rounded-lg border">
+                    </ul>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+                         <img src="https://i.imgur.com/FFst4S2.png" alt="AISコード一覧のExcel画面" class="rounded-lg border">
+                         <img src="https://i.imgur.com/NcuiUo4.png" alt="AIS2005のPDFデータ画面" class="rounded-lg border">
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- フッター -->
+        <footer class="text-center mt-12 py-6 border-t">
+            <p class="text-gray-500">&copy; 2024 使い方マニュアル. All rights reserved.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
